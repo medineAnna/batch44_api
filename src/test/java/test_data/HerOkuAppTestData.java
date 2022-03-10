@@ -1,5 +1,7 @@
 package test_data;
 
+import org.json.JSONObject;
+
 import java.util.HashMap;
 
 public class HerOkuAppTestData {
@@ -27,5 +29,28 @@ https://restful-booker.herokuapp.com/booking/47
         expectedData.put("bookingdates",bookingDates);
 
         return expectedData;
+    }
+    /*
+       https://restful-booker.herokuapp.com/booking
+       { "firstname": "Ali",
+                  "lastname": "Can",
+                  "totalprice": 500,
+                  "depositpaid": true,
+                  "bookingdates": {
+                      "checkin": "2022-03-01",
+                      "checkout": "2022-03-11"
+                   } */
+    public JSONObject setUpTestAndRequestData(){
+        JSONObject bookingsDate=new JSONObject();
+        bookingsDate.put("ckeckin","2022-03-01");
+        bookingsDate.put("ckeckout","2022-03-11");
+
+        JSONObject expectedRequest=new JSONObject();
+        expectedRequest.put("firstname","Ali");
+        expectedRequest.put("lastname","Can");
+        expectedRequest.put("totalprice",500);
+        expectedRequest.put("depositpaid",true);
+        expectedRequest.put("bookingdates",bookingsDate);
+        return expectedRequest;
     }
 }
