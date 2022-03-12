@@ -42,14 +42,14 @@ https://restful-booker.herokuapp.com/booking/47
                    } */
     public JSONObject setUpTestAndRequestData(){
         JSONObject bookingsDate=new JSONObject();
-        bookingsDate.put("ckeckin","2022-03-01");
-        bookingsDate.put("ckeckout","2022-03-11");
+        bookingsDate.put("ckeckin","2021-01-05");
+        bookingsDate.put("ckeckout","2021-01-10");
 
         JSONObject expectedRequest=new JSONObject();
-        expectedRequest.put("firstname","Ali");
-        expectedRequest.put("lastname","Can");
-        expectedRequest.put("totalprice",500);
-        expectedRequest.put("depositpaid",true);
+        expectedRequest.put("firstname","Batch30");
+        expectedRequest.put("lastname","bitti");
+        expectedRequest.put("totalprice",123);
+        expectedRequest.put("depositpaid",false);
         expectedRequest.put("bookingdates",bookingsDate);
         return expectedRequest;
     }
