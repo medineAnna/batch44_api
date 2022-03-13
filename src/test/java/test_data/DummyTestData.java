@@ -1,5 +1,7 @@
 package test_data;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,6 +45,20 @@ public class DummyTestData {
         expectedData.put("sondanUcuncuCalisanMaasi",675000);
         expectedData.put("arananYaslar",yaslar);
         expectedData.put("onuncuCalisanr",onuncu);
+        return expectedData;
+    }
+    public JSONObject setUpDeleteExpectedData(){
+        /*
+        {
+ "status": "success",
+ "data": "2",
+ "message": "Successfully! Record has been deleted"
+ }*/
+        JSONObject expectedData=new JSONObject();
+        expectedData.put("status","success");
+        expectedData.put("data",2);
+        expectedData.put("message", "Successfully! Record has been deleted");
+
         return expectedData;
     }
 }

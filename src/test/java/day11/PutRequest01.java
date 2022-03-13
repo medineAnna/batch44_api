@@ -44,7 +44,7 @@ public class PutRequest01 extends JsonPlaceHolderBaseUrl {
 
         //JsonPath ile
         JsonPath json=response.jsonPath();
-        Assert.assertEquals(200,,response.getStatusCode());
+        Assert.assertEquals(200,response.getStatusCode());
         Assert.assertEquals(expectedRequestdata.getBoolean("completed"),json.getBoolean("copmleted"));
         Assert.assertEquals(expectedRequestdata.getInt("userId"),json.getInt("userId"));
         Assert.assertEquals(expectedRequestdata.getString("title"),json.getString("title"));
