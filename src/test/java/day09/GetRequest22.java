@@ -1,6 +1,7 @@
 package day09;
 
 import base_url.HerOkuAppBaseUrl;
+import base_url.HerOkuBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
